@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* Styles for the header */
+}
+
+.background-section {
+    background-image: url('images/background1.jpeg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust how the image should cover the section */
+    background-position: center; /* Adjust the position of the background image within the section */
+    height: 400px; /* Set the height of your section, adjust as needed */
+    /* Add any other styling for the section if required */
+}
+
+/* Add styles for the rest of your webpage as needed */
+main {
+    /* Additional styles for the main content area */
+}

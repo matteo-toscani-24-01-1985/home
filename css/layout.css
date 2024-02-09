@@ -1,0 +1,239 @@
+/* ----------------------------------------------------------------------
+Titel:     Main CSS
+Autor:     Joachim Kildau
+Created:   08.03.2013
+---------------------------------------------------------------------- */
+/* --- Document --- */
+:root{
+   --main-color: #2484c6;
+/*--main-color: #41a62a;*/
+/*--main-color: #ff0055;*/
+/*--main-color: #990088;*/
+}
+
+html {
+   height: 100%;
+   font-size: 0.8em;
+}
+
+* {
+   scroll-margin-top: 100px;
+}
+
+
+
+body {
+	height: 100%;
+   background-color: #dcdcdc;
+   color: #5a5a5a;
+}
+
+
+
+#inner_wrapper {
+	display: block;
+	position: relative;
+	width: 960px;
+	margin: 70px auto 0px auto;
+}
+
+
+
+
+.separator {
+   display: block;
+   height: 2px;
+   clear: both;
+   border: none;
+}
+
+
+
+
+
+
+
+
+/* --- Subnavigation --- */
+#subnavigation {
+   display: block;
+   float: left;
+   width: 180px;
+   margin: 75px 0px 0px;
+}
+
+#subnavigation li {
+   margin: 0px 0px 10px 0px;
+}
+
+#subnavigation li a {
+   display: block;
+   width: 120px;
+   padding: 5px 10px;
+   color: #5a5a5a;
+   text-decoration: none;
+   background-color: #fcfcfc;
+   border: 1px solid #fff;
+   box-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+}
+
+#subnavigation li a:hover, #subnavigation li a:focus {
+   color: var(--main-color);
+}
+
+/* --- Content --- */
+#content {
+   display: block;
+   float: left;
+   width: 780px;
+	
+}
+
+
+
+h1 {
+   font-size: 1.2em;
+   font-weight: normal;
+}
+
+h2 {
+   font-size: 1.2em;
+   color: var(--main-color);
+   margin: 0px 0px 10px 0px;
+   text-decoration: none;
+}
+
+
+
+
+
+
+/* --- Publications --- */
+.publications {
+   margin: 0px 0px 20px 0px;
+   padding: 75px 50px 25px 50px;
+   background-color: #fcfcfc;
+   border: 1px solid #fff;
+   box-shadow: 0px -1px 0px rgba(0,0,0,0.1);
+}
+
+
+
+.publications h1 {
+   display: block;
+   width: 100px;
+   -webkit-transform: rotate(270deg);
+   -moz-transform: rotate(270deg);
+   -o-transform: rotate(270deg);
+   margin: -5px 0px -25px -110px;
+   padding: 12px 10px 8px 10px;
+   background-color: var(--main-color);
+   color: #fff;
+   text-align: center;
+   font-weight: bold;
+   writing-mode: lr-tb;
+
+}
+
+.publications h2 {
+   margin: 0px 0px 5px 0px;
+}
+
+.publications h2 a {
+   color: black;
+   text-decoration: none;
+}
+
+.publications h2 a:hover, .publications h2 a:focus {
+   text-decoration: underline;
+}
+
+.publications .pic {
+   display: block;
+   float: left;
+   width: 100px;
+   height: 100px;
+   margin: 0px 10px 0px 0px;
+   background: transparent url(img/iconset.png) 0px -150px no-repeat;
+   background-color: var(--main-color);
+   box-shadow: 0px 0px 1px rgba(0,0,0,0.1);
+   color: #fff;
+}
+
+
+.publications ul {
+   margin: 0px 0px 50px 0px;
+}
+
+.publications ul li {
+   margin: 0px 0px 10px 0px;
+   padding: 0px 0px 10px 0px;
+   border-bottom: 3px solid #f0f0f0;
+}
+
+.publications ul dl {
+   display: block;
+   float: left;
+   width: 565px;
+}
+
+.publications ul dt, .publications ul dd {
+   display: block;
+   float: left;
+}
+
+.publications ul dt {
+   text-indent: -9999px;
+   width: 15px;
+   height: 15px;
+}
+
+.publications ul dd {
+   margin: 0px 10px 0px 0px;
+}
+
+
+
+
+.publications ul dt.authors {margin: 0px 0px 10px 0px; background: transparent url(img/iconset.png) -100px -50px no-repeat; background-color: var(--main-color);}
+.publications ul dt.journal {margin: 0px 0px 10px 0px; background: transparent url(img/iconset.png) -50px -100px no-repeat; background-color: var(--main-color);}
+.publications ul dt.data {margin: 0px 5px 0px 0px; background: transparent url(img/iconset.png) 0px -50px no-repeat; background-color: var(--main-color);}
+
+.publications ul li dt.summary, .publications ul li dt.citation {
+   width: 0px;
+   height: 0px;
+}
+
+.publications ul li .summary {
+   display: inherit;
+   width: 555px;
+   max-height: 150px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   overflow: hidden;
+}
+.publications ul li dd.citation {display: none;}
+.publications ul li dd.citation {
+   margin: 5px 0px 0px 0px;
+   padding: 5px;
+   border: 5px solid transparent;
+   border-color: var(--main-color);
+}
+.publications ul li:hover .summary {display: none;}
+.publications ul li:hover .citation {display: inherit;}
+
+.raw h2, .raw .pic, .raw ul li dt, .raw ul li dd, .raw ul li dt.citation, .raw ul li dt.summary, .raw ul li dd.summary, .raw h1 { display: none; }
+.raw ul {margin-bottom: 0px;}
+.raw ul li { margin: 0px; padding: 0px; border-bottom: none;}
+.raw ul dl { width: auto;}
+.raw ul li dd.citation { display: inherit; padding: 1px; border: hidden;}
+
+
+
+
+
+
+
+
+
+ 

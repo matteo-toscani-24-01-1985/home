@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-US"><head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Our Group</title>
+ 
+	<style>
+	.navigation {
+    text-align: right;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+
+  .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navigation li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .navigation a:hover {
+    text-decoration: underline;
+  }
+		</style>
+	
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9;
+	      background-image: url('background.jpeg'); /* Add your background image URL here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+
+	
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .member-container {
+    text-align: center;
+    margin: 20px;
+    width: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+  }
+
+  .member-container:hover {
+    transform: scale(1.05);
+  }
+
+  .member-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .member-name {
+    font-weight: bold;
+    margin: 10px 0;
+  }
+
+  .member-email {
+    color: #555;
+	  font-size: 12px;
+  }
+
+  .research-interests {
+    font-style: italic;
+    color: #777;
+  }
+
+  .affiliation {
+    color: #333;
+    font-size: 14px;
+  }
+
+  .collaborator-container {
+    display: flex;
+    justify-content: space-between;
+  }
+	
+	 .title {
+    font-size: 40px;
+    margin: 0 0 10px 100px; /* Adjust the margin value to shift the title to the right */
+    padding: 0;
+  }
+</style>
+</head>
+<body>
+
+	
+	<div class="navigation">
+ <ul>
+    <li style="font-size: 18px;  color: #FFFFFF" ><a href="index.html">HOME</a></li>
+    <li style="font-size: 18px;  color: #FFFFFF"><a href="people.html">PEOPLE</a></li>
+    <li style="font-size: 18px;  color: #FFFFFF"><a href="publications.html">PUBLICATIONS</a></li>
+  </ul>
+</div>
+	
+
+	
+<h1 class="title"> </h1>
+
+<div class="container">
+  <div class="member-container">
+    <img src="Matteo.png" alt="Member 1" class="member-photo">
+    <div class="member-name">Matteo Toscani</div>
+    <div class="affiliation">Bournemouth University</div>
+    <div class="member-email"><a href="mailto:john@example.com">mtoscani@bournemouth.ac.uk</a></div>
+    <div class="research-interests">Colour and Material Perception, Peripheral Vision, Perceptual Saliency, Touch Material Perception, Visual Illusions</div>
+  </div>
+
+  <div class="collaborator-container">
+    <div class="member-container">
+      <img src="Anna.jpg" alt="Collaborator 1" class="member-photo">
+      <div class="member-name">Anna Metzger</div>
+      <div class="affiliation">Bournemouth University</div>
+      <div class="member-email"><a href="mailto:alice@example.com">ametzger@bournemouth.ac.uk</a></div>
+      <div class="research-interests">Active Perception, Multisensory Saliency, Touch Perception, Material Perception, Visual Illusions </div>
+    </div>
+
+    <div class="member-container">
+      <img src="Kameliya.png" alt="Collaborator 2" class="member-photo">
+      <div class="member-name">Kameliya Krachunova</div>
+      <div class="affiliation">Bournemouth University</div>
+      <div class="member-email"><a href="mailto:bob@example.com">  </a></div>
+      <div class="research-interests"> <br> Individual Differences, Visual Saliency and Eye movements, Visual Illusions</div>
+    </div>
+  </div>
+
+  <div class="member-container">
+    <img src="Mark.png" alt="Member 3" class="member-photo">
+    <div class="member-name">Mark Gather</div>
+    <div class="affiliation">Bournemouth University</div>
+    <div class="member-email"><a href="mailto:jane@example.com"> </a></div>
+    <div class="research-interests"><br> Touch Perception, Multisensory Perception, Shape Perception </div>
+  </div>
+
+  
+  <div class="collaborator-container">
+    <div class="member-container">
+      <img src="Claudio.png" alt="Collaborator 3" class="member-photo">
+      <div class="member-name">Giuseppe Claudio Guarnera 
+</div>
+      <div class="affiliation">University of York</div>
+      <div class="member-email"><a href="mailto:emily@example.com">claudio.guarnera@york.ac.uk</a></div>
+      <div class="research-interests">Computer Graphics, Computer Vision, Material appearance, Color imaging, Applied perception </div>
+    </div>
+
+    <div class="member-container">
+      <img src="Tao.png" alt="Collaborator 4" class="member-photo">
+      <div class="member-name">Tao Chen</div>
+      <div class="affiliation">University of York</div>
+      <div class="member-email"><a href="mailto:michael@example.com">t.chen@york.ac.uk</a></div>
+      <div class="research-interests">Machine Learning, Computer Vision, Deep Learning, Pose Estimation, Robotic</div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
