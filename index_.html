@@ -7,11 +7,6 @@
 <meta name="description" content="Bournemouth Perception Lab">
 <title>Bournemouth Perception Lab</title>
 
-<link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
-<link rel="shortcut icon" href="favicon.ico">
-<link rel="apple-touch-icon" href="favicon.png">
-
-
 <style>
 :root {
   --navy: #17384b;
@@ -186,75 +181,6 @@ body {
   border: 1px solid #bccfd7;
   color: var(--navy);
 }
-
-
-/* =========================
-   LAB LOGO IN HERO
-   ========================= */
-
-.hero-copy {
-  max-width: 1040px;
-  text-align: left;
-}
-
-.hero-brand-layout {
-  display: grid;
-  grid-template-columns: 245px minmax(0, 1fr);
-  gap: 34px;
-  align-items: center;
-}
-
-.hero-logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-logo {
-  display: block;
-  width: 100%;
-  max-width: 235px;
-  height: auto;
-  object-fit: contain;
-}
-
-.hero-text {
-  min-width: 0;
-}
-
-.hero-text .hero-lead {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-.hero-text .hero-actions {
-  justify-content: flex-start;
-}
-
-@media (max-width: 780px) {
-  .hero-copy {
-    text-align: center;
-  }
-
-  .hero-brand-layout {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .hero-logo {
-    max-width: 200px;
-  }
-
-  .hero-text .hero-lead {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-text .hero-actions {
-    justify-content: center;
-  }
-}
-
 
 /* =========================
    GIFS — FUNDAMENTAL FIX
@@ -513,10 +439,6 @@ body {
     padding: 28px 20px;
   }
 
-  .hero-logo {
-    max-width: 175px;
-  }
-
   .hero h1 {
     font-size: 44px;
   }
@@ -595,30 +517,18 @@ body {
   <section class="hero">
 
     <div class="hero-copy">
-      <div class="hero-brand-layout">
+      <span class="eyebrow">Perception · Action · Representation</span>
 
-        <div class="hero-logo-wrap">
-          <img src="BournemouthPerceptionLab_logo.png"
-               class="hero-logo"
-               alt="Bournemouth Perception Lab logo">
-        </div>
+      <h1>Bournemouth Perception Lab</h1>
 
-        <div class="hero-text">
-          <span class="eyebrow">Perception · Action · Representation</span>
+      <p class="hero-lead">
+        We study <strong>how sensory information becomes perceptual experience</strong>:
+        from sensing and active sampling to the internal representations that shape how the world appears.
+      </p>
 
-          <h1>Bournemouth Perception Lab</h1>
-
-          <p class="hero-lead">
-            We study <strong>how sensory information becomes perceptual experience</strong>:
-            from sensing and active sampling to the internal representations that shape how the world appears.
-          </p>
-
-          <div class="hero-actions">
-            <a class="button button-primary" href="people.html">Meet the lab</a>
-            <a class="button button-secondary" href="publications.html">Explore publications</a>
-          </div>
-        </div>
-
+      <div class="hero-actions">
+        <a class="button button-primary" href="people.html">Meet the lab</a>
+        <a class="button button-secondary" href="publications.html">Explore publications</a>
       </div>
     </div>
 
