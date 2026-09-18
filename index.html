@@ -4,174 +4,662 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bournemouth Perception Lab">
 <title>Bournemouth Perception Lab</title>
 
-<link href="css/singlePageTemplate.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="styles.css">
-<script>var __adobewebfontsappname__="dreamweaver"</script>
-<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
-
 <style>
-/* ===== Global ===== */
+:root {
+  --navy: #17384b;
+  --navy2: #244f67;
+  --ink: #22313a;
+  --muted: #617681;
+  --line: #dbe6eb;
+  --soft: rgba(247,250,252,.90);
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  padding: 0;
-  font-family: "Source Sans Pro", Arial, sans-serif;
-  background: linear-gradient(180deg, #eefdff 0%, #ffffff 40%);
-  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--ink);
+
+  /* ORIGINAL BACKGROUND */
+  background-color: #f0f5f9;
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+
+  line-height: 1.6;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(23, 56, 75, .96);
+  box-shadow: 0 2px 10px rgba(0,0,0,.12);
 }
 
-/* ===== Navigation ===== */
 .navigation {
-  text-align: right;
-  background: #1f2a33;
-  padding: 14px 30px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  max-width: 1180px;
+  min-height: 66px;
+  margin: 0 auto;
+  padding: 0 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lab-mark {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 17px;
 }
 
 .navigation ul {
-  list-style-type: none;
+  display: flex;
+  gap: 26px;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
-.navigation li {
-  display: inline-block;
-  margin-left: 28px;
-}
-
-.navigation a {
+.navigation a.nav-link {
+  color: rgba(255,255,255,.88);
   text-decoration: none;
-  color: #fff;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: opacity .2s ease;
-}
-
-.navigation a:hover {
-  opacity: 0.75;
-}
-
-/* ===== Hero ===== */
-.background-section {
-  text-align: center;
-  padding: 70px 20px 40px 20px;
-}
-
-.hero_header {
-  font-size: 46px;
-  margin: 0 0 10px 0;
+  font-size: 14px;
   font-weight: 700;
-  color: #0e3a53;
+  letter-spacing: .5px;
+  padding: 22px 0 19px;
+  border-bottom: 3px solid transparent;
 }
 
-.tagline {
-  font-size: 22px;
-  color: #4a6575;
-  margin-bottom: 40px;
+.navigation a.nav-link:hover,
+.navigation a.nav-link.active {
+  color: #fff;
+  border-bottom-color: #9cc8d4;
 }
 
-/* ===== Intro Quote ===== */
-.intro-quote {
-  font-size: 28px;
-  font-style: italic;
-  text-align: center;
-  color: #2c3e50;
+/* =========================
+   PAGE
+   ========================= */
+
+.page-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+  padding: 68px 0 46px;
+}
+
+.hero-copy {
   max-width: 900px;
-  margin: 30px auto 50px auto;
-  line-height: 1.4;
-}
-
-/* ===== Images ===== */
-.images-wrapper {
+  margin: 0 auto 38px;
+  padding: 36px 40px;
   text-align: center;
-  margin-bottom: 40px;
+  background: rgba(255,255,255,.88);
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(23,56,75,.10);
 }
 
-.image-container {
+.eyebrow {
   display: inline-block;
-  margin: 12px;
-  padding: 10px;
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  margin-bottom: 14px;
+  color: var(--navy2);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
 }
 
-.image-container img {
+.hero h1 {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(44px, 6vw, 72px);
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+.hero-lead {
+  max-width: 760px;
+  margin: 24px auto 0;
+  color: #425d6b;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+.hero-lead strong {
+  color: var(--navy);
+}
+
+.hero-actions {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 11px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.button-primary {
+  background: var(--navy);
+  color: white;
+}
+
+.button-secondary {
+  background: white;
+  border: 1px solid #bccfd7;
+  color: var(--navy);
+}
+
+/* =========================
+   GIFS — FUNDAMENTAL FIX
+   No absolute positioning.
+   No overlap.
+   No cropping.
+   ========================= */
+
+.research-images {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  align-items: stretch;
+}
+
+.research-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid rgba(23,56,75,.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(23,56,75,.10);
+  overflow: hidden;
+}
+
+.research-image-box {
+  height: 230px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: white;
+  border-radius: 10px;
+}
+
+/* IMPORTANT:
+   all GIFs stay inside the same fixed box;
+   object-fit: contain means NEVER crop */
+.research-image-box img {
   display: block;
-  height: 240px;
+  max-width: 100%;
+  max-height: 100%;
   width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
-/* ===== Description ===== */
-.lab-description {
-  font-size: 20px;
-  color: #333;
-  line-height: 1.65;
-  max-width: 900px;
-  margin: 20px auto 70px auto;
+/* Hen is intentionally smaller inside the SAME box */
+.research-image-box img.periphery-gif {
+  max-width: 55%;
+  max-height: 60%;
+}
+
+.research-label {
+  margin-top: 10px;
   text-align: center;
+  color: var(--navy);
+  font-size: 13px;
+  font-weight: 700;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 700px) {
-  .hero_header { font-size: 34px; }
-  .tagline { font-size: 18px; }
-  .intro-quote { font-size: 22px; padding: 0 15px; }
-  .lab-description { font-size: 18px; padding: 0 15px; }
-  .image-container img { height: 200px; }
+/* =========================
+   STATEMENT
+   ========================= */
+
+.statement {
+  margin: 34px 0 72px;
+  padding: 38px 44px;
+  border-radius: 18px;
+  background: rgba(247,250,252,.90);
+  border: 1px solid var(--line);
+}
+
+.statement p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #304956;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+.statement strong {
+  color: var(--navy);
+}
+
+/* =========================
+   WHAT WE INVESTIGATE
+   ========================= */
+
+.section-heading {
+  max-width: 780px;
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  margin: 0 0 9px;
+  color: var(--navy);
+  font-size: 35px;
+  letter-spacing: -.5px;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.pillars {
+  padding-bottom: 72px;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.pillar {
+  padding: 25px 24px 27px;
+  background: rgba(255,255,255,.93);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.pillar h3 {
+  margin: 0 0 10px;
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.pillar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* =========================
+   METHODS
+   ========================= */
+
+.methods {
+  margin-bottom: 72px;
+  padding: 46px 46px 34px;
+  border-radius: 18px;
+  background: rgba(23,56,75,.95);
+  color: white;
+}
+
+.methods .section-heading h2 {
+  color: white;
+}
+
+.methods .section-heading p {
+  color: rgba(255,255,255,.75);
+}
+
+.method-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.method-chip {
+  padding: 9px 13px;
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 999px;
+  background: rgba(255,255,255,.07);
+  color: rgba(255,255,255,.92);
+  font-size: 14px;
+}
+
+/* Large wide motion tracking figure */
+.motion-feature {
+  margin-top: 30px;
+  padding: 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 14px;
+}
+
+.motion-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background: white;
+}
+
+.motion-caption {
+  margin-top: 10px;
+  text-align: center;
+  color: rgba(255,255,255,.74);
+  font-size: 13px;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+  padding: 26px 0 38px;
+  text-align: center;
+  color: #607580;
+  font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+  .research-images {
+    grid-template-columns: 1fr;
+  }
+
+  .research-image-box {
+    height: 260px;
+  }
+
+  .pillar-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .navigation {
+    padding: 0 15px;
+  }
+
+  .lab-mark {
+    font-size: 13px;
+  }
+
+  .navigation ul {
+    gap: 13px;
+  }
+
+  .navigation a.nav-link {
+    font-size: 11px;
+  }
+
+  .page-shell {
+    padding: 0 17px;
+  }
+
+  .hero {
+    padding-top: 46px;
+  }
+
+  .hero-copy {
+    padding: 28px 20px;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+  }
+
+  .hero-lead {
+    font-size: 19px;
+  }
+
+  .research-image-box {
+    height: 220px;
+  }
+
+  .research-image-box img.periphery-gif {
+    max-width: 50%;
+    max-height: 55%;
+  }
+
+  .statement {
+    padding: 28px 22px;
+  }
+
+  .statement p {
+    font-size: 21px;
+  }
+
+  .methods {
+    padding: 34px 22px 24px;
+  }
+}
+
+.section-heading-accent {
+  max-width: 780px;
+  margin-bottom: 30px;
+  padding-left: 22px;
+  border-left: 4px solid #6da7b7;
+}
+
+.section-heading-accent h2 {
+  margin: 0 0 8px;
+  color: #17384b;
+}
+
+.section-heading-accent p {
+  margin: 0;
+  color: #3f5662;
+  font-size: 18px;
+  line-height: 1.55;
+  text-shadow: 0 1px 2px rgba(255,255,255,.8);
+}
+.section-heading-accent {
+  max-width: 780px;
+  margin-bottom: 30px;
+  padding: 18px 22px;
+  border-left: 4px solid #6da7b7;
+  background: rgba(255,255,255,.68);
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<header class="site-header">
+  <nav class="navigation" aria-label="Main navigation">
+    <a class="lab-mark" href="index.html">Bournemouth Perception Lab</a>
 
-  <!-- Navigation -->
-  <div class="navigation">
     <ul>
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="people.html">PEOPLE</a></li>
-      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a class="nav-link active" href="index.html">HOME</a></li>
+      <li><a class="nav-link" href="people.html">PEOPLE</a></li>
+      <li><a class="nav-link" href="publications.html">PUBLICATIONS</a></li>
     </ul>
-  </div>
+  </nav>
+</header>
 
-  <!-- Hero Section -->
-  <section class="background-section">
-    <h2 class="hero_header">Bournemouth Perception Lab</h2>
-    <p class="tagline">from Sensing, through active sampling, <br> to perceptual representations</p>
+<main class="page-shell">
+
+  <section class="hero">
+
+    <div class="hero-copy">
+      <span class="eyebrow">Perception · Action · Representation</span>
+
+      <h1>Bournemouth Perception Lab</h1>
+
+      <p class="hero-lead">
+        We study <strong>how sensory information becomes perceptual experience</strong>:
+        from sensing and active sampling to the internal representations that shape how the world appears.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button button-primary" href="people.html">Meet the lab</a>
+        <a class="button button-secondary" href="publications.html">Explore publications</a>
+      </div>
+    </div>
+
+    <!--
+      IMPORTANT:
+      These three cards are ordinary grid items.
+      They cannot overlap because there is no absolute positioning.
+    -->
+    <div class="research-images">
+
+      <div class="research-card">
+        <div class="research-image-box">
+          <img src="HandEye.gif" alt="Hand and eye movement research">
+        </div>
+        <div class="research-label">Active sampling</div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-image-box">
+          <img src="PeripheryHen.gif"
+               class="periphery-gif"
+               alt="Peripheral vision demonstration">
+        </div>
+        <div class="research-label">Peripheral vision</div>
+      </div>
+
+      <div class="research-card">
+        <div class="research-image-box">
+          <img src="FOVEATED.gif" alt="Foveated visual representation">
+        </div>
+        <div class="research-label">Computational Modelling</div>
+      </div>
+
+<div class="research-card">
+        <div class="research-image-box">
+          <img src="colour_constancy.gif" alt="Foveated visual representation">
+        </div>
+        <div class="research-label">Colour Vision</div>
+      </div>
+
+    </div>
+
   </section>
 
-  <!-- Quote -->
-  <p class="intro-quote"><strong>Perception is an active process:</strong> We are interested in how things appear, depending on their physical properties and the way we sample them with our senses.</p>
+  <section class="statement">
+    <p>
+      <strong>Perception is an active process.</strong>
+      What we experience depends not only on the physical properties of the world,
+      but also on how we sample it with our eyes, hands and other senses.
+    </p>
+  </section>
 
-  <!-- Images -->
-  <div class="images-wrapper">
-    <div class="image-container">
-      <img src="HandEye.gif" alt="HandEye">
-    </div>
+  <section class="pillars">
 
-    <div class="image-container">
-      <img src="PeripheryHen.gif" alt="PeripheryHen">
-    </div>
 
-    <div class="image-container">
-      <img src="FOVEATED.gif" alt="FOVEATED">
-    </div>
-  </div>
 
-  <!-- Description -->
-  <p class="lab-description">
-    We use hand tracking and eye tracking to investigate how we sample our environment using our senses; psychophysical methods to measure what people perceive, and machine learning to model the process that bridges sampling and perception. Recently, we have initiated measurements of electroencephalography (EEG) and pupil responses to determine physiological correlates of perceptual experiences. We employ 3D printing and computer graphics to generate lifelike stimuli for our participants as well as for computer simulations.
+  <div class="section-heading section-heading-accent">
+  <h2>What we investigate</h2>
+  <p>
+    Our work combines psychophysics, behavioural measurement and computational modelling
+    to understand perception across vision and touch.
   </p>
-
 </div>
+
+    <div class="pillar-grid">
+
+      <article class="pillar">
+        <h3>Active sensing</h3>
+        <p>
+          We use eye tracking and motion tracking to study how observers selectively
+          sample information from complex environments.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <h3>Perceptual appearance and performance</h3>
+        <p>
+          Psychophysical experiments let us measure how things appear and how accurately
+          people perform across colour, material, shape, peripheral vision and multisensory tasks.
+        </p>
+      </article>
+
+      <article class="pillar">
+        <h3>Computational models</h3>
+        <p>
+          We use computational and machine-learning models as models of perception,
+          as ideal observers, and to study how sensory sampling relates to perceptual representations.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="methods">
+
+    <div class="section-heading">
+      <h2>Methods</h2>
+      <p>
+        Our experiments combine controlled laboratory measurements with lifelike stimuli
+        and increasingly naturalistic tasks.
+      </p>
+    </div>
+
+    <div class="method-list">
+      <span class="method-chip">Eye tracking</span>
+      <span class="method-chip">Motion tracking</span>
+      <span class="method-chip">Psychophysics</span>
+      <span class="method-chip">Machine learning</span>
+      <span class="method-chip">EEG</span>
+      <span class="method-chip">Pupillometry</span>
+      <span class="method-chip">Computer graphics</span>
+      <span class="method-chip">3D printing</span>
+      <span class="method-chip">Virtual &amp; rendered environments</span>
+    </div>
+
+    <div class="motion-feature">
+      <img src="MotionTracking.png"
+           alt="Motion tracking laboratory setup, tracked hand interaction, tracking visualisation, 3D-printed shapes and material samples">
+
+      <div class="motion-caption">
+        Motion tracking for active touch and object interaction.
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+  Bournemouth Perception Lab · Bournemouth University
+</footer>
 
 </body>
 </html>
