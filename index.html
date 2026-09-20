@@ -197,9 +197,11 @@ body {
   text-align: left;
 }
 
+
+
 .hero-brand-layout {
   display: grid;
-  grid-template-columns: 245px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 245px;
   gap: 34px;
   align-items: center;
 }
@@ -573,6 +575,17 @@ body {
   border-left: 4px solid #6da7b7;
   background: rgba(255,255,255,.68);
 }
+
+.research-image-box img,
+.research-image-box video {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 </style>
 </head>
 
@@ -597,11 +610,7 @@ body {
     <div class="hero-copy">
       <div class="hero-brand-layout">
 
-        <div class="hero-logo-wrap">
-          <img src="BournemouthPerceptionLab_logo.png"
-               class="hero-logo"
-               alt="Bournemouth Perception Lab logo">
-        </div>
+        
 
         <div class="hero-text">
           <span class="eyebrow">Perception · Action · Representation</span>
@@ -619,6 +628,12 @@ body {
           </div>
         </div>
 
+        <div class="hero-logo-wrap">
+          <img src="BournemouthPerceptionLab_logo.png"
+               class="hero-logo"
+               alt="Bournemouth Perception Lab logo">
+        </div>
+
       </div>
     </div>
 
@@ -629,12 +644,24 @@ body {
     -->
     <div class="research-images">
 
+
+
+
       <div class="research-card">
         <div class="research-image-box">
           <img src="HandEye.gif" alt="Hand and eye movement research">
         </div>
-        <div class="research-label">Active sampling</div>
+        <div class="research-label">Hand and Object tracking</div>
       </div>
+
+      <div class="research-card">
+  <div class="research-image-box">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="mobile_eye.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="research-label">Motion Tracking </div>
+</div>
 
       <div class="research-card">
         <div class="research-image-box">
@@ -659,7 +686,29 @@ body {
         <div class="research-label">Colour Vision</div>
       </div>
 
+
+ <div class="research-card">
+  <div class="research-image-box">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="wobbling.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="research-label">Active Sampling  </div>
+</div>
+
+
+ <div class="research-card">
+  <div class="research-image-box">
+    <video autoplay muted loop playsinline preload="metadata">
+      <source src="fixations_overlay_singleFix.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="research-label">Mobile eye-tracking</div>
+</div>
+
     </div>
+
+
 
   </section>
 
